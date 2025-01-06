@@ -1,0 +1,275 @@
+/* ==UserStyle==
+@name           MyAnimeList Full Width
+@namespace      https://github.com/rimopa
+@version        1.0.0
+@description    Userstyle to make the MAL webpage full page width
+@author         rimopa <rimopapomir@gmail.com> (http://rimopa.github.io/site)
+@supportURL     https://github.com/rimopa/userstyles/issues
+@updateURL      https://raw.githubusercontent.com/rimopa/userstyles/main/myanimelist-wider.user.css
+@license        MIT
+==/UserStyle== */
+/*<GENERAL{*/
+@-moz-document domain("myanimelist.net") {
+  @media (min-width: 1060px) {
+    .h1.edit-info {
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .page-common {
+      #myanimelist,
+      #menu {
+        width: 100% !important;
+      }
+    }
+    #footer-block > * {
+      width: auto !important;
+    }
+  }
+  .page-common #headerSmall {
+    padding: 6px 0 6px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+  .link-mal-logo {
+    order: 0;
+  }
+  .page-common #header-menu {
+    order: 2;
+    padding-right: 8px !important;
+  }
+  .page-common #headerSmall .banner-header-anime-straming {
+    order: 1;
+  }
+  .page-common #headerSmall .banner-header-anime-straming,
+  .page-common #header-menu,
+  .link-mal-logo {
+    position: unset !important;
+  }
+
+  .widget.mxj .widget-content {
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+}
+/*GENERAL/>*/
+/*<FIXED LEFT SIDE*/
+@-moz-document url-prefix("https://myanimelist.net/anime/"),
+url-prefix("https://myanimelist.net/manga/")
+{
+  @media (min-width: 1060px) {
+    .detail-stack-block {
+      justify-content: space-between !important;
+    }
+    .anime-slide-outer,
+    .anime-slide-block,
+    .di-t > .di-tc:nth-child(1),
+    .di-t > .di-tc:nth-child(3) {
+      width: auto !important;
+    }
+    div#content > table,
+    .rightside > table,
+    .theme-songs > table {
+      table-layout: fixed !important;
+    }
+
+    .bannerDiv {
+      width: calc(100% + 24px) !important;
+      max-height: none !important;
+    }
+    @supports (object-fit: cover) {
+      .bannerImage {
+        max-height: none !important;
+      }
+    }
+    .left-right,
+    .left-column {
+      width: calc(50% - 9px) !important;
+    }
+    .left-column {
+      padding-right: 18px !important;
+    }
+  }
+}
+@-moz-document url-prefix("https://myanimelist.net/profile/")
+{
+  @media (min-width: 1060px) {
+    #modern-about-me,
+    .fav-slide-outer,
+    .fav-slide-block {
+      width: auto !important;
+      /*"!importatn" bugs it*/
+    }
+  }
+}
+@-moz-document url-prefix("https://myanimelist.net/anime/producer/")
+{
+  @media (min-width: 1060px) {
+    .content-right {
+      width: auto !important;
+      box-sizing: border-box !important;
+    }
+    .clearfix,
+    .navi-seasonal {
+      width: auto !important;
+      box-sizing: border-box !important;
+    }
+  }
+}
+/*FIXED LEFT SIDE/>*/
+/*<FIXED RIGHT SIDE*/
+@-moz-document url("https://myanimelist.net/"),
+url("https://myanimelist.net/panel.php"),
+url-prefix("https://myanimelist.net/news")
+{
+  @media (min-width: 1060px) {
+    .left-column {
+      width: calc(100vw - 336px) !important;
+    }
+    .widget-slide-outer,
+    .widget-slide-block {
+      width: auto !important;
+    }
+    .widget-slide .js-widget-slide {
+      width: calc(100% + 115px) !important;
+    }
+    .widget-content {
+      overflow-x: hidden !important;
+    }
+  }
+}
+/*FIXED RIGHT SIDE/>*/
+/*<LISTS*/
+@-moz-document url-prefix("https://myanimelist.net/anime/season")
+{
+  @media (min-width: 1060px) {
+    .navi-seasonal {
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+  }
+}
+@-moz-document url-prefix("https://myanimelist.net/anime.php"),
+url-prefix("https://myanimelist.net/manga.php"),
+url-prefix("https://myanimelist.net/manga/magazine/")
+{
+  @media (min-width: 1060px) {
+    .anime-manga-search .genre-link .genre-list {
+      width: calc((100vw - 24px) / 5) !important;
+    }
+    .anime-search-filter .category-wrapper {
+      width: calc((100vw - 141px) / 4) !important;
+    }
+  }
+}
+@-moz-document url-prefix("https://myanimelist.net/mymessages.php")
+{
+  @media (min-width: 1060px) {
+    .mym:not(.mym_checkboxes),
+    .message {
+      width: 100% !important;
+    }
+    .message > .mym_checkboxes {
+      padding-left: 5px !important;
+      padding-right: 5px !important;
+    }
+    .message {
+      display: flex !important;
+      justify-content: space-between;
+      .message .dark-mode {
+        background-color: #222 !important;
+      }
+      .message :not(.dark-mode) {
+        background-color: #f6f6f6 !important;
+      }
+    }
+  }
+}
+@-moz-document url-prefix("https://myanimelist.net/recommendations.php")
+{
+  @media (min-width: 1060px) {
+    .recommendations-user-recs-text {
+      max-width: none !important;
+    }
+  }
+}
+@-moz-document url-prefix("https://myanimelist.net/news")
+{
+  @media (min-width: 1060px) {
+    .content-left {
+      width: calc(100vw - 336px) !important;
+    }
+    .menu-category .di-b .mt8,
+    .news-unit {
+      width: auto !important;
+    }
+  }
+}
+@-moz-document url-prefix("https://myanimelist.net/company.php"),
+url-prefix("https://myanimelist.net/character.php")
+{
+  @media (min-width: 1060px) {
+    tr.ranking-list {
+      display: flex !important;
+      width: calc(100vw - 38px) !important;
+      justify-content: space-between !important;
+    }
+  }
+}
+/*LISTS/>*/
+/*<OTHERS*/
+@-moz-document url-prefix("https://myanimelist.net/dbchanges.php")
+{
+  @media (min-width: 1060px) {
+    div#content > table {
+      table-layout: fixed !important;
+      width: auto !important;
+    }
+  }
+}
+
+@-moz-document url("https://myanimelist.net/about.php")
+{
+  @media (min-width: 1060px) {
+    .lazyloaded {
+      object-fit: cover !important;
+      width: 100% !important;
+      height: auto !important;
+      object-position: top !important;
+    }
+  }
+}
+@-moz-document url("https://myanimelist.net/membership")
+{
+  @media (min-width: 1060px) {
+    .about-extras,
+    .about-no-ads,
+    .plan-header,
+    .plan-description {
+      width: auto !important;
+    }
+    .plan {
+      width: 100% !important;
+    }
+    .about-no-ads {
+      display: flex !important;
+      justify-content: space-evenly !important;
+    }
+    .about-no-ads > * {
+      display: unset !important;
+    }
+  }
+}
+@-moz-document url("https://myanimelist.net/advertising")
+{
+  @media (min-width: 1060px) {
+    #ad_menu,
+    #ad_menu.fixed:after {
+      width: 100% !important;
+    }
+    #ad_menu.fixed {
+      left: 0 !important;
+      margin-left: 0 !important;
+    }
+  }
+}
+/*OTHERS/>*/
