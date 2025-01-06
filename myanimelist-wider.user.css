@@ -29,14 +29,13 @@
     padding: 6px 0 6px !important;
     display: flex !important;
     justify-content: space-between !important;
+    margin: 0 8px;
   }
   .link-mal-logo {
     order: 0;
-    padding-left: 8px !important;
   }
   .page-common #header-menu {
     order: 2;
-    padding-right: 8px !important;
   }
   .page-common #headerSmall .banner-header-anime-straming {
     order: 1;
