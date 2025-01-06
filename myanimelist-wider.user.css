@@ -129,6 +129,9 @@ url-prefix("https://myanimelist.net/news")
     .widget-slide-block {
       width: auto !important;
     }
+    .widget-slide-block {
+      max-width: 100% !important;
+    }
     .widget-slide .js-widget-slide {
       width: calc(100% + 115px) !important;
     }
