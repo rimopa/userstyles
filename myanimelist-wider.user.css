@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MyAnimeList Full Width
 @namespace      https://github.com/rimopa
-@version        1.0.1
+@version        1.0.2
 @description    Userstyle to make the MAL webpage full page width
 @author         rimopa <rimopapomir@gmail.com> (http://rimopa.github.io/site)
 @supportURL     https://github.com/rimopa/userstyles/issues/new/choose
@@ -72,7 +72,6 @@ url-prefix("https://myanimelist.net/manga/")
       table-layout: fixed !important;
     }
     .bannerDiv {
-      width: calc(100% + 24px) !important;
       max-height: none !important;
     } /*<MAL-clean compatibility (see https://github.com/KanashiiDev/MAL-Clean-JS)*/
     @supports (object-fit: cover) {
