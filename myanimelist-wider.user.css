@@ -71,16 +71,15 @@ url-prefix("https://myanimelist.net/manga/")
     .theme-songs > table {
       table-layout: fixed !important;
     }
-
     .bannerDiv {
       width: calc(100% + 24px) !important;
       max-height: none !important;
-    }
+    } /*<MAL-clean compatibility (see https://github.com/KanashiiDev/MAL-Clean-JS)*/
     @supports (object-fit: cover) {
       .bannerImage {
         max-height: none !important;
       }
-    }
+    } /*MAL-clean/>*/
     .left-right,
     .left-column {
       width: calc(50% - 9px) !important;
