@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MyAnimeList Full Width
 @namespace      https://github.com/rimopa
-@version        1.0.2
+@version        1.0.3
 @description    Userstyle to make the MAL webpage full page width
 @author         rimopa <rimopapomir@gmail.com> (http://rimopa.github.io/site)
 @supportURL     https://github.com/rimopa/userstyles/issues/new/choose
@@ -25,6 +25,12 @@
       width: auto !important;
     }
   }
+  /*<hide side ads*/
+  #D_300x600_160x600_Right.ad-sas.mauto.ac,
+  #D_300x600_160x600_Left.ad-sas.mauto.ac {
+    visibility: hidden;
+  }
+  /*hide side ads/>*/
   .page-common #headerSmall {
     padding: 6px 0 6px !important;
     display: flex !important;
@@ -45,7 +51,6 @@
   .link-mal-logo {
     position: unset !important;
   }
-
   .widget.mxj .widget-content {
     display: flex !important;
     justify-content: space-between !important;
