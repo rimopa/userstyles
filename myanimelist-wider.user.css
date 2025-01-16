@@ -210,20 +210,8 @@ url-prefix("https://myanimelist.net/manga/magazine/")
     }
   }
 }
-@-moz-document url-prefix("https://myanimelist.net/company.php"),
-url-prefix("https://myanimelist.net/character.php")
-{
-  @media (min-width: 1060px) {
-    tr.ranking-list {
-      display: flex !important;
-      width: calc(100vw - 38px) !important;
-      justify-content: space-between !important;
-    }
-  }
-}
-@-moz-document url("https://myanimelist.net/anime/season/archive")
-{
-  @media (min-width: 1060px) {
+  @-moz-document url("https://myanimelist.net/anime/season/archive")
+  {
     .season .anime-seasonal-byseason {
       width: calc(100% - 32px) !important;
       margin: auto 16px !important;
