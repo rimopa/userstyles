@@ -201,15 +201,11 @@ url-prefix("https://myanimelist.net/manga/magazine/")
       max-width: none !important;
     }
   }
-}
-@-moz-document url-prefix("https://myanimelist.net/news")
-{
-  @media (min-width: 1060px) {
-    .content-left {
-      width: calc(100vw - 336px) !important;
-    }
-    .menu-category .di-b .mt8,
-    .news-unit {
+  @-moz-document url-prefix("https://myanimelist.net/news")
+  {
+    .content-left,
+    .news-unit,
+    body.news .menu-category {
       width: auto !important;
     }
   }
