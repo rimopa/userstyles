@@ -7,6 +7,8 @@
 @supportURL     https://github.com/rimopa/userstyles/issues/new/choose
 @updateURL      https://raw.githubusercontent.com/rimopa/userstyles/main/myanimelist-wider.user.css
 @license        MIT
+@var            text sidesPadding "Padding at the sides (px)" 0px
+@preprocessor   stylus
 ==/UserStyle== */
 /*<GENERAL{*/
 @-moz-document domain("myanimelist.net") {
@@ -35,7 +37,9 @@
     padding: 6px 0 6px !important;
     display: flex !important;
     justify-content: space-between !important;
-    margin: 0 8px;
+    if sidesPadding <=4px {
+      margin: 0 8px;
+    }
   }
   .link-mal-logo {
     order: 0;
@@ -126,7 +130,7 @@ url-prefix("https://myanimelist.net/news")
 {
   @media (min-width: 1060px) {
     .left-column {
-      width: calc(100vw - 336px) !important;
+      width: "calc(100vw - 336px - 2 * %s)" % sidesPadding !important;
     }
     .widget-slide-outer,
     .widget-slide-block {
