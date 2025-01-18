@@ -14,8 +14,19 @@
 /*<GENERAL{*/
 @-moz-document domain("myanimelist.net") {
     /*<hide side ads*/
-    #D_300x600_160x600_Right.ad-sas.mauto.ac, #D_300x600_160x600_Left.ad-sas.mauto.ac {
-        visibility: hidden; }
+    if sidesPadding < 165px {
+        #D_300x600_160x600_Right.ad-sas.mauto.ac, #D_300x600_160x600_Left.ad-sas.mauto.acm, [class$="malside--r"], [class$="malside--l"] {
+            visibility: hidden;
+        }
+    }
+    else {
+        [class$="malside--r"], #D_300x600_160x600_Right.ad-sas.mauto.ac {
+            right: -165px !important;
+        }
+        [class$="malside--l"], #D_300x600_160x600_Left.ad-sas.mauto.ac {
+            left: -165px !important;
+        }
+    }
     /*hide side ads/>*/
     .page-common #headerSmall {
         padding: 6px 0 6px !important;
