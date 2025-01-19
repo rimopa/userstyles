@@ -34,6 +34,11 @@
                 width: 160px !important;
             }
         }
+        .page-common {
+            [class$="malside--r"] [class$="sticky-wrapper"], [class$="malside--l"] [class$="pdatla"] {
+                width: 160px !important;
+            }
+        }
     }
     /*hide side ads/>*/
     .page-common #headerSmall {
