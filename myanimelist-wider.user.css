@@ -22,9 +22,17 @@
     else {
         [class$="malside--r"], #D_300x600_160x600_Right.ad-sas.mauto.ac {
             right: -165px !important;
+            left: auto !important;
+            text-align: -webkit-left;
         }
         [class$="malside--l"], #D_300x600_160x600_Left.ad-sas.mauto.ac {
             left: -165px !important;
+            right: auto !important;
+        }
+        .dark-mode .page-common {
+            [class$="malside--r"] [class$="sticky-wrapper"], [class$="malside--l"] [class$="pdatla"] {
+                width: 160px !important;
+            }
         }
     }
     /*hide side ads/>*/
