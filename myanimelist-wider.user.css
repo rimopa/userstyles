@@ -67,7 +67,7 @@
         }
         .page-common {
             #myanimelist {
-                width: "calc(100% - %s * 2)" % sidesPadding !important;
+                width: "calc(100% - 2 * s%)" % sidesPadding !important;
             }
             #menu {
                 width: auto !important;
