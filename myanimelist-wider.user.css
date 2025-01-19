@@ -119,6 +119,9 @@
         #modern-about-me, .fav-slide-outer, .fav-slide-block {
             width: auto !important;
         }
+        .content-container {
+            table-layout: fixed;
+        }
     }
 }
 @-moz-document url-prefix("https://myanimelist.net/anime/producer/") {
