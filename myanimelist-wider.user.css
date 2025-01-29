@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MyAnimeList Full Width
 @namespace      https://github.com/rimopa
-@version        1.1.7
+@version        1.1.8
 @description    Userstyle to make the MAL webpage full page width
 @author         rimopa <rimopapomir@gmail.com> (http://rimopa.github.io/site)
 @supportURL     https://github.com/rimopa/userstyles/issues/new/choose
@@ -93,7 +93,7 @@
         .anime-slide-outer, .anime-slide-block, .di-t > .di-tc:nth-child(1), .di-t > .di-tc:nth-child(3) {
             width: auto !important;
         }
-        div#content > table, .rightside > table, .theme-songs > table {
+        div#content > table, .rightside > table:nth-of-type(1), .theme-songs > table {
             table-layout: fixed !important;
         }
         .bannerDiv {
@@ -111,6 +111,14 @@
         }
         .left-column {
             padding-right: 18px !important;
+        }
+    }
+}
+@-moz-document url-prefix("https://myanimelist.net/anime/characters"), url-prefix("https://myanimelist.net/manga/characters") {
+    @media (min-width: minWidth) {
+        /*First staff position showing name wrong fix*/
+        .rightside > table {
+            table-layout: inherit !important;
         }
     }
 }
