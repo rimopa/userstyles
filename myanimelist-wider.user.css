@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MyAnimeList Full Width
 @namespace      https://github.com/rimopa
-@version        1.1.8
+@version        1.1.9
 @description    Userstyle to make the MAL webpage full page width
 @author         rimopa <rimopapomir@gmail.com> (http://rimopa.github.io/site)
 @supportURL     https://github.com/rimopa/userstyles/issues/new/choose
@@ -15,27 +15,34 @@
 @-moz-document domain("myanimelist.net") {
     /*<hide side ads*/
     if sidesPadding < 165px {
-        #D_300x600_160x600_Right.ad-sas.mauto.ac, #D_300x600_160x600_Left.ad-sas.mauto.acm, [class$="malside--r"], [class$="malside--l"] {
+        #D_300x600_160x600_Right.ad-sas.mauto.ac,
+        #D_300x600_160x600_Left.ad-sas.mauto.acm,
+        [class$="malside--r"],
+        [class$="malside--l"] {
             visibility: hidden;
         }
     }
     else {
-        [class$="malside--r"], #D_300x600_160x600_Right.ad-sas.mauto.ac {
+        [class$="malside--r"],
+        #D_300x600_160x600_Right.ad-sas.mauto.ac {
             right: -165px !important;
             left: auto !important;
             text-align: -webkit-left;
         }
-        [class$="malside--l"], #D_300x600_160x600_Left.ad-sas.mauto.ac {
+        [class$="malside--l"],
+        #D_300x600_160x600_Left.ad-sas.mauto.ac {
             left: -165px !important;
             right: auto !important;
         }
         .dark-mode .page-common {
-            [class$="malside--r"] [class$="sticky-wrapper"], [class$="malside--l"] [class$="pdatla"] {
+            [class$="malside--r"] [class$="sticky-wrapper"],
+            [class$="malside--l"] [class$="pdatla"] {
                 width: 160px !important;
             }
         }
         .page-common {
-            [class$="malside--r"] [class$="sticky-wrapper"], [class$="malside--l"] [class$="pdatla"] {
+            [class$="malside--r"] [class$="sticky-wrapper"],
+            [class$="malside--l"] [class$="pdatla"] {
                 width: 160px !important;
             }
         }
@@ -58,7 +65,9 @@
     .page-common #headerSmall .banner-header-anime-straming {
         order: 1;
     }
-    .page-common #headerSmall .banner-header-anime-straming, .page-common #header-menu, .link-mal-logo {
+    .page-common #headerSmall .banner-header-anime-straming,
+    .page-common #header-menu,
+    .link-mal-logo {
         position: unset !important;
     }
     .widget.mxj .widget-content {
@@ -85,15 +94,21 @@
 }
 /*GENERAL/>*/
 /*<FIXED LEFT SIDE*/
-@-moz-document url-prefix("https://myanimelist.net/anime/"), url-prefix("https://myanimelist.net/manga/") {
+@-moz-document url-prefix("https://myanimelist.net/anime/"),
+url-prefix("https://myanimelist.net/manga/") {
     @media (min-width: minWidth) {
         .detail-stack-block {
             justify-content: space-between !important;
         }
-        .anime-slide-outer, .anime-slide-block, .di-t > .di-tc:nth-child(1), .di-t > .di-tc:nth-child(3) {
+        .anime-slide-outer,
+        .anime-slide-block,
+        .di-t > .di-tc:nth-child(1),
+        .di-t > .di-tc:nth-child(3) {
             width: auto !important;
         }
-        div#content > table, .rightside > table:nth-of-type(1), .theme-songs > table {
+        div#content > table,
+        .rightside > table:nth-of-type(1),
+        .theme-songs > table {
             table-layout: fixed !important;
         }
         .bannerDiv {
@@ -106,7 +121,8 @@
             }
         }
         /*MAL-clean/>*/
-        .left-right, .left-column {
+        .left-right,
+        .left-column {
             width: calc(50% - 9px) !important;
         }
         .left-column {
@@ -114,7 +130,8 @@
         }
     }
 }
-@-moz-document url-prefix("https://myanimelist.net/anime/characters"), url-prefix("https://myanimelist.net/manga/characters") {
+@-moz-document url-prefix("https://myanimelist.net/anime/characters"),
+url-prefix("https://myanimelist.net/manga/characters") {
     @media (min-width: minWidth) {
         /*First staff position showing name wrong fix*/
         .rightside > table {
@@ -138,7 +155,8 @@
             width: auto !important;
             box-sizing: border-box !important;
         }
-        .clearfix, .navi-seasonal {
+        .clearfix,
+        .navi-seasonal {
             width: auto !important;
             box-sizing: border-box !important;
         }
@@ -146,12 +164,15 @@
 }
 /*FIXED LEFT SIDE/>*/
 /*<FIXED RIGHT SIDE*/
-@-moz-document url("https://myanimelist.net/"), url("https://myanimelist.net/panel.php"), url-prefix("https://myanimelist.net/news") {
+@-moz-document url("https://myanimelist.net/"),
+url("https://myanimelist.net/panel.php"),
+url-prefix("https://myanimelist.net/news") {
     @media (min-width: minWidth) {
         .left-column {
             width: "calc(100vw - 336px - 2 * %s)" % sidesPadding !important;
         }
-        .widget-slide-outer, .widget-slide-block {
+        .widget-slide-outer,
+        .widget-slide-block {
             width: auto !important;
         }
         .widget-slide-block {
@@ -165,6 +186,16 @@
         }
     }
 }
+@-moz-document url(https://myanimelist.net/forum/) {
+    @media (min-width: minWidth) {
+        .forum .forum-board .board {
+            width: 100% !important;
+        }
+        .forum .forum-board-list {
+            width: auto !important;
+        }
+    }
+}
 /*FIXED RIGHT SIDE/>*/
 /*<LISTS*/
 @-moz-document url-prefix("https://myanimelist.net/anime/season") {
@@ -175,7 +206,9 @@
         }
     }
 }
-@-moz-document url-prefix("https://myanimelist.net/anime.php"), url-prefix("https://myanimelist.net/manga.php"), url-prefix("https://myanimelist.net/manga/magazine/") {
+@-moz-document url-prefix("https://myanimelist.net/anime.php"),
+url-prefix("https://myanimelist.net/manga.php"),
+url-prefix("https://myanimelist.net/manga/magazine/") {
     @media (min-width: minWidth) {
         .anime-manga-search .genre-link .genre-list {
             /*simplified for (100vw-24px-2*sidesPadding)/5*/
@@ -254,7 +287,10 @@
     }
 }
 @-moz-document url("https://myanimelist.net/membership") {
-    .about-extras, .about-no-ads, .plan-header, .plan-description {
+    .about-extras,
+    .about-no-ads,
+    .plan-header,
+    .plan-description {
         @media (min-width: minWidth) {
             width: auto !important;
         }
